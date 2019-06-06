@@ -9,5 +9,5 @@
 }
 
 #overlay.hidden #beatmap, #overlay.hidden #performance > * {
-	transform: translate(0, -15px);
+	transform: translate(0, -150px);
 }

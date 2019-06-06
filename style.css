@@ -185,21 +185,23 @@ body {
 /* Animations and state */
 
 #overlay {
-	--show: cubic-bezier(0.19, 1, 0.22, 1) 300ms;
-	--hide: cubic-bezier(0.55, 0.085, 0.68, 0.53) 200ms;
+	--show: cubic-bezier(0.44, 1.5, 1, 1) 500ms;
+	--hide: cubic-bezier(0.44, 0, 0.79, -0.5) 500ms;
+	--showalpha: cubic-bezier(0.44, 1, 1, 1) 500ms;
+	--hidealpha: cubic-bezier(0.44, 0, 0.79, 0) 500ms;
 }
 
 #overlay #beatmap, #overlay #performance > * {
 	transition:
-		opacity var(--show),
+		opacity var(--showalpha),
 		transform var(--show);
 }
 
 #overlay.hidden #beatmap, #overlay.hidden #performance > * {
 	opacity: 0;
-	transform: translate(0, 15px);
+	transform: translate(0, 150px);
 	transition:
-		opacity var(--hide),
+		opacity var(--hidealpha),
 		transform var(--hide);
 }
 

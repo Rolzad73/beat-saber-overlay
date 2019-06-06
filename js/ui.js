@@ -1,23 +1,23 @@
 const ui = (() => {
 	var main = document.getElementById("overlay");
 
-	const performance = (() => {
-		var rank = document.getElementById("rank");
-		var percentage = document.getElementById("percentage");
-		var score = document.getElementById("score");
-		var combo = document.getElementById("combo");
+	//const performance = (() => {
+	//	var rank = document.getElementById("rank");
+	//	var percentage = document.getElementById("percentage");
+	//	var score = document.getElementById("score");
+	//	var combo = document.getElementById("combo");
 
-		function format(number) {
-			return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		}
+	//	function format(number) {
+	//		return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	//	}
 
-		return (data) => {
-			score.innerText = format(data.score);
-			combo.innerText = data.combo;
-			rank.innerText = data.rank;
-			percentage.innerText = (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%";
-		}
-	})();
+	//	return (data) => {
+	//		score.innerText = format(data.score);
+	//		combo.innerText = data.combo;
+	//		rank.innerText = data.rank;
+	//		percentage.innerText = (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%";
+	//	}
+	//})();
 
 	const timer = (() => {
 		const radius = 30;
@@ -100,8 +100,8 @@ const ui = (() => {
 		var artist = document.getElementById("artist");
 
 		var difficulty = document.getElementById("difficulty");
-		var bpm = document.getElementById("bpm");
-		var njs = document.getElementById("njs");
+		//var bpm = document.getElementById("bpm");
+		//var njs = document.getElementById("njs");
 		
 		function format(number) {
 			if (Number.isNaN(number)) {
@@ -127,13 +127,14 @@ const ui = (() => {
 			artist.innerText = data.songAuthorName;
 
 			difficulty.innerText = data.difficulty;
-			bpm.innerText = `${format(data.songBPM)} BPM`;
 
-			if (data.noteJumpSpeed) {
-				njs.innerText = `${format(data.noteJumpSpeed)} NJS`;
-			} else {
-				njs.innerText = "";
-			}
+			//bpm.innerText = `${format(data.songBPM)} BPM`;
+
+			//if (data.noteJumpSpeed) {
+			//	njs.innerText = `${format(data.noteJumpSpeed)} NJS`;
+			//} else {
+			//	njs.innerText = "";
+			//}
 
 			timer.start(Date.now(), data.length);
 		}
