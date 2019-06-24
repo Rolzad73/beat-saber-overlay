@@ -15,8 +15,8 @@ body {
 	flex-direction: column;
 	
 	position: absolute;
-	left: 40px;
-	bottom: 40px;
+	left: 10px;
+	bottom: 10px;
 }
 
 /* Beatmap */
@@ -27,8 +27,11 @@ body {
 
 #cover {
 	overflow: hidden;
-	border-radius: 6px;
 	position: relative;
+}
+
+#cover #image {
+	border-radius: 10px;
 }
 
 #image {
@@ -58,37 +61,27 @@ body {
 }
 
 #title {
+	font-family: "Kabel Black", sans-serif;
 	font-size: 24px;
 	font-weight: 700;
-}
-
-#title::after {
-  content: "\200E"
-}
-
-#title::before {
-  content: "\200E"
+	text-shadow: 2px 2px 2px #000000;
 }
 
 #subtitle {
+	font-family: "Kabel Black", sans-serif;
 	font-size: 14px;
 	font-weight: 600;
 	margin: 0 4px 2px 4px;
+	text-shadow: 2px 2px 2px #000000;
 }
 
-#artist {
+#artistsong, #artistlevel {
+	font-family: "Kabel Black", sans-serif;
 	display: block;
 	font-size: 16px;
 	font-weight: 400;
 	margin: 2px 0 0 0;
-}
-
-#artist::after {
-  content: "\200E"
-}
-
-#artist::before {
-  content: "\200E"
+	text-shadow: 2px 2px 2px #000000;
 }
 
 #difficulty, #bpm, #njs {
@@ -106,6 +99,7 @@ body {
 	color: black;
 	background: white;
 	border-radius: 4px;
+	box-shadow: 2px 2px 2px #000000;
 }
 
 #bpm {
@@ -120,6 +114,7 @@ body {
 
 #cover svg {
 	transform: rotate(-90deg);
+	border-radius: 10px;
 }
 
 #cover div {
@@ -232,4 +227,13 @@ body {
 
 #overlay #performance > *:nth-child(1) {
 	transition-delay: 300ms !important;
+}
+
+#title::after, #title::before, #subtitle::after, #subtitle::before, #artistsong::after, #artistlevel::after, #artistsong::before, #artistlevel::before {
+  content: "\200E"
+}
+
+@font-face {
+font-family: "Kabel Black";
+src: url("fonts/Kabel-Black.ttf");
 }

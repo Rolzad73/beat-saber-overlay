@@ -97,7 +97,8 @@ const ui = (() => {
 
 		var title = document.getElementById("title");
 		var subtitle = document.getElementById("subtitle");
-		var artist = document.getElementById("artist");
+		var artistsong = document.getElementById("artistsong");
+		var artistlevel = document.getElementById("artistlevel");
 
 		var difficulty = document.getElementById("difficulty");
 		//var bpm = document.getElementById("bpm");
@@ -124,13 +125,14 @@ const ui = (() => {
 
 			title.innerText = data.songName;
 			subtitle.innerText = data.songSubName;
+			artistsong.innerText = data.songAuthorName;
+			artistlevel.innerText = data.levelAuthorName;
 
-			if (data.levelAuthorName) {
-				artist.innerText = `${data.songAuthorName} [${data.levelAuthorName}]`;
-			} else {
-				artist.innerText = data.songAuthorName;
-			}
-
+			//if (data.levelAuthorName) {
+			//	artist.innerText = `${data.songAuthorName} [${data.levelAuthorName}]`;
+			//} else {
+			//	artist.innerText = data.songAuthorName;
+			//}
 
 			difficulty.innerText = data.difficulty;
 

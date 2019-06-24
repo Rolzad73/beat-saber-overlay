@@ -1,6 +1,7 @@
 #overlay {
 	direction: rtl;
-	right: 40px;
+	right: 10px;
+	left: 0px;
 }
 
 #score {
@@ -9,4 +10,12 @@
 
 #difficulty, #bpm {
 	direction: ltr;
+}
+
+#title, #subtitle, #artistsong, #artistlevel {
+	text-shadow: -2px 2px 2px #000000;
+}
+
+#difficulty {
+	box-shadow: -2px 2px 2px #000000;
 }
