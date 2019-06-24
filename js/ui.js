@@ -124,7 +124,13 @@ const ui = (() => {
 
 			title.innerText = data.songName;
 			subtitle.innerText = data.songSubName;
-			artist.innerText = data.songAuthorName;
+
+			if (data.levelAuthorName) {
+				artist.innerText = `${data.songAuthorName} [${data.levelAuthorName}]`;
+			} else {
+				artist.innerText = data.songAuthorName;
+			}
+
 
 			difficulty.innerText = data.difficulty;
 

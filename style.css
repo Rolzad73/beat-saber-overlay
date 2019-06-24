@@ -45,6 +45,7 @@ body {
 }
 
 #text {
+	color: white;
 	flex-grow: 1;
 
 	/* Fix text offset */
@@ -61,6 +62,14 @@ body {
 	font-weight: 700;
 }
 
+#title::after {
+  content: "\200E"
+}
+
+#title::before {
+  content: "\200E"
+}
+
 #subtitle {
 	font-size: 14px;
 	font-weight: 600;
@@ -72,6 +81,14 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	margin: 2px 0 0 0;
+}
+
+#artist::after {
+  content: "\200E"
+}
+
+#artist::before {
+  content: "\200E"
 }
 
 #difficulty, #bpm, #njs {
